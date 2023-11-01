@@ -1,0 +1,204 @@
+﻿<Window x:Class="Mini_Uber.CreditCardPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mini_Uber"
+        mc:Ignorable="d"
+        Title="CreditCardPage" Height="604.639" Width="526.289" WindowStartupLocation="CenterScreen" Background="#FFD9E2F4">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <!--<Label Name="newsify_lb" Content="Mini Uber"
+                   FontFamily="Garamond"
+                   FontSize="35"
+                    Height="auto"
+                       Width="auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                        
+                       Margin="0,10,0,10" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                   FontWeight="Bold">
+                    <Label.Effect>
+                        <DropShadowEffect Opacity="0.2"/>
+                    </Label.Effect>
+                </Label>
+                <Label Name="stay_informed_lb" Content="Stay Informed, Stay Ahead"
+                   FontFamily="Garamond"
+                   FontSize="12"
+                    Height="auto"
+                       Width="auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                        
+                       Margin="0,-18,0,0" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                   FontWeight="Bold">
+                    <Label.Effect>
+                        <DropShadowEffect Opacity="0.1"/>
+                    </Label.Effect>
+                </Label>
+                <Border BorderBrush="Black" BorderThickness="1" Width="150" Height="0.5" Margin="0,-42,0,0" Opacity="0.8"/>-->
+
+
+        </StackPanel>
+
+
+        <Border Name="login_border" 
+                BorderThickness="0"
+                CornerRadius="20" 
+                BorderBrush="white" 
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Background="White"
+              Width="430" Height="450">
+
+            <StackPanel x:Name="login_pl">
+
+                <Label Name="login_lb"
+                   Content="Enter Your Credit Card" 
+                   FontFamily="Nirmala UI"
+                   FontSize="30" 
+                   FontWeight="Bold"
+                     Margin="0,50,0,0" 
+                    Height="auto"
+                       Width="auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                           Foreground="#5A719D"/>
+
+              
+
+                <TextBlock Name="user_email_lb" Text="Credit Card Nunmber"
+                    FontFamily="Nirmala UI"
+                   FontSize="12"
+                     Margin="0,16,120,0" 
+                    Height="auto"
+                       Width="auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"/>
+
+
+
+
+                <TextBox Name="number_txt"
+                         FontSize="18"
+                         Width="250"
+                         Height="30"
+                         VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Margin="0,3,0,0"
+                         FontFamily="Nirmala UI"
+                         BorderThickness="1" 
+                         Foreground="#FF292929"
+                         >
+
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+
+                    </TextBox.Resources>
+                    <!--<TextBox.Effect>
+                        <DropShadowEffect Color="#0536FF" ShadowDepth="3"/>
+                        </TextBox.Effect>-->
+                </TextBox>
+
+
+                <TextBlock Name="password_lb" Text="cvv"
+                    FontFamily="Nirmala UI"
+                   FontSize="12"
+                     Margin="0,16,220,0" 
+                    Height="auto"
+                       Width="auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"/>
+
+
+                <TextBox Name="cvv_txt"
+                         FontSize="18"
+                         Width="120"
+                         Height="30"
+                         VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Left"
+                         Margin="0,3,130,0"
+                         FontFamily="Nirmala UI"
+                         BorderThickness="1" 
+                         Foreground="#FF292929"
+                         >
+
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="6"/>
+                        </Style>
+
+                    </TextBox.Resources>
+                    <!--<TextBox.Effect>
+                        <DropShadowEffect Color="#0536FF" ShadowDepth="3"/>
+                        </TextBox.Effect>-->
+                </TextBox>
+
+
+
+                <Button Name="confirm_btn"
+                
+                Width="250"
+                Height="40"
+                FontFamily="Nirmala UI"
+                Margin="0,30,0,0"
+                Cursor="Hand"
+                BorderBrush="Blue"
+                Content="confirm" >
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border CornerRadius="12"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#0536FF"/>
+                                    <Setter Property="Foreground" Value="white"/>
+                                    <Setter Property="FontSize" Value="16" />
+                                    <Setter Property="FontWeight" Value="Bold"/>
+
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="False">
+                                    <Setter Property="Background" Value="#2662FF"/>
+                                    <Setter Property="Foreground" Value="white"/>
+                                    <Setter Property="FontSize" Value="16"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+
+
+
+
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Window>
